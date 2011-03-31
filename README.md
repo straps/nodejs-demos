@@ -14,5 +14,8 @@ perfect for step-by-step debug of node.js programs
 
 Now run `node-inspector &` and start your node app as `node --debug-brk app.js`; open
 the page `http://127.0.0.1:8080/debug?port=5858` on a webkit-based browser
-and see the magic
+and see the magic.
+
+If you want, you can use my [nodebug](https://github.com/straps/nodejs-demos/blob/master/nodebug)
+that launch node-inspector, the application and google chrome in debug mode
 
