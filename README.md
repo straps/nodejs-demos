@@ -1,7 +1,7 @@
 # Node.js examples, demos and tests just as reference and doc
 
-To install node in Ubuntu follow these steps: http://goo.gl/5FrHg
+To install node in Ubuntu [click here](http://goo.gl/5FrHg)
 
-For other platforms see here: http://goo.gl/SWiTb
+For other platforms [click here](http://goo.gl/SWiTb)
 
 
