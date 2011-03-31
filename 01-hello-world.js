@@ -2,8 +2,6 @@
 
 
 console.log('hello ');
-debugger;
-
 
 setTimeout(function(){
 	console.log('world!!');
