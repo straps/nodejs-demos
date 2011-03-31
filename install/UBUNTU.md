@@ -11,5 +11,5 @@ Instructions: https://github.com/joyent/node/wiki/Installing-Node.js-via-package
 
 	curl http://npmjs.org/install.sh | sh
 
-For permission problem do a
+For permission problems do a
 	sudo chmod -R 777 /usr/local
