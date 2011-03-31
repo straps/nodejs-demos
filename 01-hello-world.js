@@ -1,8 +1,9 @@
 //Simpler is impossible
 
-
-console.log('hello ');
+console.log('ry video http://goo.gl/aIoZM');
 
 setTimeout(function(){
 	console.log('world!!');
-}, 10000);
+}, 2000);
+
+console.log('hello ');
