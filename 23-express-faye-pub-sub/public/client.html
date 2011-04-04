@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Node.js Faye pub/sub test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="/faye.js"></script>
+	<script type="text/javascript">
+		(function($){
+			$(function(){
+				var client = new Faye.Client('/faye', {
+						timeout: 120
+					});
+
+				client.subscribe('/channel', function(message) {
+					$("#messages").append("<p>" + message.text + "</p>");
+				});
+
+				$('a#ajax-msg').click(function(){
+					$.post('http://'+location.host+'/message', {message:'Message from Ajax link'});
+				});
+			});
+		})(jQuery);
+	</script>
+  </head>
+  <body>
+    Start <b>node server.js</b> and send some POST data to localhost:8000, ie: <br/>
+	<code>
+		curl -X POST -H "Content-Type: application/json" -d '{"message":"hello nodecasts.org"}' http://localhost:8000/message
+	</code>
+	<br/>or<br/>
+	<code>
+		curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "message=Hello from using html form" http://localhost:8000/message
+	</code>
+	<br/>or <a id="ajax-msg" href="#">click here</a> to send an Ajax request
+
+	<br/>Messages:<br/>
+	<div id="messages" style="overflow:auto; width:500px; height:300px; border:1px solid grey;">
+
+	</div>
+  </body>
+</html>
